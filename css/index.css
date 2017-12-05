@@ -411,17 +411,110 @@ input {
     left: 190px;
     top: -16px;
     width: 998px;
-    min-height: 478px;
+    /* height: 530px; */
+    height: 0;
+    opacity: 0;
     border: 1px solid #f7f7f7;
     background-color: #f7f7f7;
     box-shadow: 2px 0 5px rgba(0,0,0,.3);
     transition: top .25s ease;
     z-index: 10;
 }
+.banleft3{
+  position: absolute;
+    left: 190px;
+    top: -44px;
+    width: 998px;  
+}
+.banleft4{
+  position: absolute;
+    left: 190px;
+    top: -72px;
+    width: 998px;  
+}
+.banleft5{
+  position: absolute;
+    left: 190px;
+    top: -100px;
+    width: 998px;  
+}
+.banleft6{
+  position: absolute;
+    left: 190px;
+    top: -128px;
+    width: 998px;  
+}
+.banleft7{
+  position: absolute;
+    left: 190px;
+    top: -156px;
+    width: 998px;  
+}
+.banleft8{
+  position: absolute;
+    left: 190px;
+    top: -184px;
+    width: 998px;  
+}
+.banleft9{
+  position: absolute;
+    left: 190px;
+    top: -212px;
+    width: 998px;  
+}
+.banleft10{
+  position: absolute;
+    left: 190px;
+    top: -240px;
+    width: 998px;  
+}
+.banleft11{
+  position: absolute;
+    left: 190px;
+    top: -268px;
+    width: 998px;  
+}
+.banleft12{
+  position: absolute;
+    left: 190px;
+    top: -296px;
+    width: 998px;  
+}
+.banleft13{
+  position: absolute;
+    left: 190px;
+    top: -324px;
+    width: 998px;  
+}
+.banleft14{
+  position: absolute;
+    left: 190px;
+    top: -352px;
+    width: 998px;  
+}
+.banleft15{
+  position: absolute;
+    left: 190px;
+    top: -380px;
+    width: 998px;  
+}
+.banleft16{
+  position: absolute;
+    left: 190px;
+    top: -408px;
+    width: 998px;  
+}
+.banleft17{
+  position: absolute;
+    left: 190px;
+    top: -436px;
+    width: 998px;  
+}
 .banleft2 a{
     line-height: 24px;
     color: #666; 
     font-size: 12px;
+
 }
 .banleft2 .blz1{
     float: left;
@@ -453,12 +546,11 @@ input {
     overflow: hidden;
     padding: 10px 0 0 20px;
     box-sizing: border-box;
-    background-color: pink;
 } 
-.banleft2 .blz1 .blz1bottom ul{
+.banleft2 .blz1 .blz1bottom .blz1bottom1{
     float: left;
 }
-.banleft2 .blz1 .blz1bottom ul :nth-child(1){
+.banleft2 .blz1 .blz1bottom .blz1bottom1 li .bl_dianshi{
     font-weight: 700;
     line-height: 46px;
 }
@@ -466,18 +558,33 @@ input {
     color: #666;
     line-height: 46px;
 }
-/* .banleft2 .blz1 .blz1bottom ul :nth-child(2){
-    float: left;
-    overflow: hidden;
-    line-height: 46px;
-    font-weight: 0;
-} */
 .banleft2 .blz2{
     float: left;
     width: 198px;
-    background-color: orange;
 }
-
+.banleft2 .blz2 ul{
+    width: 168px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.blz2 .blz22 a{
+    width: 83px;
+    height: 35px;
+    margin: 0 0 1px 1px;
+    background-color: #e7e7e7;
+    float: left;
+}
+.banleft2 .blz2 .blz23{
+    margin-top: 10px;
+}
+.banleft2 .blz2 .blz23 a{
+    margin-bottom: 1px;
+    height: 134px;
+    background-color: #e7e7e7;
+}
+.banleft2 .blz2 li{
+    float: left;
+}
 .banner .bancenter{
     width: 790px;
     height: 480px;
@@ -805,7 +912,7 @@ input {
     color: #fff;
     font-size: 10px;
     text-align: center;
-    z-index: 10;
+    z-index: 6;
 }
 .banner .banright .br3 .br3bottom li:nth-child(8) a  p{
     position: absolute;
@@ -839,7 +946,7 @@ input {
     color: #fff;
     font-size: 10px;
     text-align: center;
-    z-index: 10;
+    z-index: 6;
 }
 .banner .banright .br3 .br3top{
     width: 190px;
