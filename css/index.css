@@ -64,15 +64,75 @@ input {
 	line-height: 30px;
 	margin-right: 10px;
 	float: left;
+    position: relative;
+}
+.icon-down-trangle{
+    position: absolute;
+    right: -10px;
+    top: 10px;
+    font-size: 10px;
+    z-index: 10;
+    line-height: 12px;
 }
 .top .topright li a:first-child{
 	color: #999;
 }
-.top .topright li a:last-child{
+.top .topright .toto :last-child{
 	color: #f10215;
 }
 .top .topright li a:hover{
 	color: #B10604;
+}
+.top-dw2{
+    position: absolute;
+    top: 0;
+    left: -11px;
+    width: 200px;
+    height: 100px;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+    background: #fff;
+    display: none;
+    z-index: 11;
+}
+.top-dw22{
+    width: 170px;
+    height: 200px;
+    padding: 10px 0;
+}
+.top-dw44{
+    position: absolute;
+    top: 0;
+    left: -1044px;
+    width: 1190px;
+    height: 150px;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+    background: #fff;
+    z-index: 100;
+    display: none;
+}
+.top-dw444{
+    position: absolute;
+    top: 0;
+    left: 1116px;
+    width: 74px;
+    height: 2px;
+    border-top: 1px solid #ccc;
+    background:#fff;
+    margin-top: -1px;
+}
+.topzi:hover .top-dw2,.topzi:hover .top-dw44{
+    display: block;
+}
+.top-dw3{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 70px;
+    height: 2px;
+    background:#fff;
+    margin-top: -1px;
 }
 .top .topright .topzi:hover{
 	color: #B10604;
@@ -93,18 +153,45 @@ input {
 	position: absolute;
 	top: 21px;
 	right: 40px;
+    z-index: 1;
 }
 .top .topright .topsanjiao .mobile_stati{
 	width: 66px;
     height: 66px;
     border: 1px solid #cfcfcf;
-    overflow: hidden;
+    position: relative;
 }
 .top .topright .topsanjiao .mobile_stati img{
-	margin: 4px auto;
+	margin: 4px 3px;
     width: 60px;
     height: 60px;
     background-color: #f6f6f6; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.wz-dw{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background:url('../img/jd1.png');
+    background-size: 60px 60px;
+}
+.wz-dw--1{
+    width: 200px;
+    height: 315px;
+    position: absolute;
+    top: -30px;
+    right:-16px;
+    z-index: 10;
+    background:url("../img/top---.png");
+    background-size: 100% 100%;
+    display: none;
+}
+.wz-dw:hover .wz-dw--1{
+    display: block;
 }
 /* logo */
 .logo img{
@@ -296,28 +383,101 @@ input {
     float: left;
     background-color: #666;
 }
-.banner .banleft li{
+.banner .banleft .banleft1{
     width: 178px;
     height: 28px;
     padding-left: 12px;
+    position: relative;
 }
-.banner .banleft li:hover{
+.banner .banleft .banleft1:hover{
     background-color: #999395;
 }
-.banner .banleft li i{
+.banner .banleft .banleft1 i{
     font-size: 14px;
     color: #fff;
     line-height: 28px;
     cursor: pointer;
 }
-.banner .banleft li i:hover{
+.banner .banleft .banleft1 i:hover{
     color: #C81623;
 }
-.banner .banleft li span{
+.banner .banleft .banleft1 span{
     font-size: 14px;
     color: #fff;
     line-height: 28px;
 }
+.banleft2{
+    position: absolute;
+    left: 190px;
+    top: -16px;
+    width: 998px;
+    min-height: 478px;
+    border: 1px solid #f7f7f7;
+    background-color: #f7f7f7;
+    box-shadow: 2px 0 5px rgba(0,0,0,.3);
+    transition: top .25s ease;
+    z-index: 10;
+}
+.banleft2 a{
+    line-height: 24px;
+    color: #666; 
+    font-size: 12px;
+}
+.banleft2 .blz1{
+    float: left;
+    width: 800px;
+}
+.banleft2 .blz1 .blz1top{
+    overflow: hidden;
+    padding-left: 20px;
+    height: 24px;
+    box-sizing: border-box;
+}
+.banleft2 .blz1 .blz1top a{
+    float: left;
+    margin-right: 10px;
+    padding: 0 10px;
+    height: 24px;
+    background-color: #6e6568;
+    line-height: 24px;
+    color: #fff;   
+}
+.banleft2 .blz1top .blz11 a .icon-xiangyou{
+    margin-left: 5px;
+    font-size: 12px;
+    color: #fff;
+    width: 10px;
+}
+.banleft2 .blz1 .blz1bottom{
+    width: 800px;
+    overflow: hidden;
+    padding: 10px 0 0 20px;
+    box-sizing: border-box;
+    background-color: pink;
+} 
+.banleft2 .blz1 .blz1bottom ul{
+    float: left;
+}
+.banleft2 .blz1 .blz1bottom ul :nth-child(1){
+    font-weight: 700;
+    line-height: 46px;
+}
+.banleft2 .blz1 .blz1bottom ul:nth-child(1) .icon-xiangyou{
+    color: #666;
+    line-height: 46px;
+}
+/* .banleft2 .blz1 .blz1bottom ul :nth-child(2){
+    float: left;
+    overflow: hidden;
+    line-height: 46px;
+    font-weight: 0;
+} */
+.banleft2 .blz2{
+    float: left;
+    width: 198px;
+    background-color: orange;
+}
+
 .banner .bancenter{
     width: 790px;
     height: 480px;
@@ -2637,4 +2797,83 @@ opacity: 0.7;
 }
 .gddw li:last-child{
     background-color: #5E4A4A;
+}
+.gddw-right{
+    width: 6px;
+    height: 100%;
+    background-color:#7a6e6e;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+}
+.dwdwdw{
+    width: 35px;
+    height: 216px;
+    position: absolute;
+    top: 50%;
+    left: -29px;
+    width: 35px;
+    margin-top: -113px;
+    z-index: 9999;
+}
+.dwdwdw2{
+    width: 35px;
+    position: absolute;
+    bottom: 0;
+    left: -29px;
+    width: 35px;
+    z-index: 9999;
+}
+.dwdwdw li,.dwdwdw2 li{
+    width: 34px;
+    height: 35px;
+    margin-left: 1px;
+    position: relative;
+    margin-top: 1px;
+    background-color: #7a6e6e;
+    border-radius: 3px 0 0 3px;
+    text-align: center;
+}
+.dwdwdw li a,.dwdwdw2 li a{
+    line-height: 35px;
+    color: #fff;
+    font-size: 20px;
+}
+.dwdwdw2 li a:last-child{
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 3px 0;
+    background-color:#D70B1C;
+    border-radius: 3px 0 0 3px; 
+
+}
+.dwdwdw li:hover,.dwdwdw2 li:hover{
+    background-color: #D70B1C;
+}
+.dwdwdw-1{
+    width: 62px;
+    height: 35px;
+    line-height: 35px;
+    color:#fff;
+    text-align: center;
+    position: absolute;
+    left:0px;
+    top: 0px;
+    z-index: -1;
+    font-size: 12px;
+    cursor: pointer;
+    background-color:#d70b1c;
+    border-radius: 3px 0px 0px 3px;
+    transition: all 0.3s linear 0.2s;
+}
+.dwdwdw-2{
+    width: 40px;
+}
+.dwdwdw li:hover .dwdwdw-1{
+    left:-60px;
+}
+.dwdwdw2 li:hover .dwdwdw-2{
+    left:-39px;
 }
