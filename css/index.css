@@ -1,12 +1,8 @@
 *{
 	margin: 0;
 	padding: 0;
-}
-*{
     font-style: normal;
-}
-ul li,ol li{
-	list-style: none;
+    list-style: none;
 }
 img{
 	display: block;
@@ -194,12 +190,16 @@ input {
     display: block;
 }
 /* logo */
-.logo img{
+.logo{
 	width: 190px;
 	height: 170px;
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+.logo img{
+    width: 190px;
+    height: 170px;
 }
 /* 搜索 */
 .search-m{
@@ -411,14 +411,17 @@ input {
     left: 190px;
     top: -16px;
     width: 998px;
-    /* height: 530px; */
-    height: 0;
-    opacity: 0;
+    height: 530px;
     border: 1px solid #f7f7f7;
     background-color: #f7f7f7;
     box-shadow: 2px 0 5px rgba(0,0,0,.3);
     transition: top .25s ease;
-    z-index: 10;
+    z-index: 999;
+    overflow: hidden;
+    display: none;
+}
+.ce_active{
+    display: block;
 }
 .banleft3{
   position: absolute;
@@ -595,11 +598,20 @@ input {
     width: 790px;
     height: 340px;
     margin-bottom: 10px;
-    background-color: tan;
     position: relative;
 }
-.banner .bancenter .c1 li img{
+.bancenter .c1 .ban-tu{
+    height: 340px;
+}
+.ban-tu .ban--tp{
+    height: 340px;
+    opacity: 0;
     position: absolute;
+    top: 0;
+    left: 0;
+}
+.ban-tu .ban-active{
+    opacity: 1;
 }
 .banner .bancenter .c1 .cyuan {
     width: 166px;
@@ -668,9 +680,6 @@ input {
     cursor: pointer;
 }
 .banner .bancenter .c1 .czuoyou .czuo:hover,.cyou:hover{
-    opacity: 1;
-}
-.banner .bancenter .c1 .czuoyou .cyou:hover{
     opacity: 1;
 }
 .banner .bancenter .c2{
@@ -822,15 +831,15 @@ input {
 }
 .banner .banright .br2 .br2center .br2c2{
     padding: 12px 0;
-    width: 160px;
-    height: 96px;
 }
-.banner .banright .br2 .br2center .br2c2 ul{
-    width: 160px;
-    height: 92px;
+.banner .banright .br2 .br2center .br2c2 .brzi{
+    display: none;
+}
+.banner .banright .br2 .br2center .br2c2 .brzi-active{
+    display: block;
 }
 .banner .banright .br2 .br2center .br2c2 ul li a{
-    font-size: 12px;
+    font-size: 10px;
     color: #666;
 }
 .banner .banright .br2 .br2center .br2c2 ul li a:hover{
@@ -985,7 +994,6 @@ input {
     width: 1190px;
     height: 305px;
     margin: 0 auto;
-    position: relative;
 }
 .jdms .jdms1 .jdmstop{
     position: relative;
@@ -1050,14 +1058,12 @@ input {
     width: 15px;
     height: 16px;
     position: absolute;
-/*     top: 20px;
-    right: 0; */
 }
-.jdms .jdms1 .czuoyou .czuo{
+.jdms .jdms1 .czuo{
     position: absolute;
-    z-index: 1;
     top: 50%;
     left: 5px;
+    z-index: 1;
     margin-top: -25px;
     width: 20px;
     height: 50px;
@@ -1066,10 +1072,10 @@ input {
     line-height: 50px;
     text-align: center;
 }
-.jdms .jdms1 .czuoyou .cyou{
+.jdms .jdms1 .cyou{
     position: absolute;
     top: 50%;
-    right: 5px;
+    right: 195px;
     z-index: 1;
     margin-top: -25px;
     width: 20px;
@@ -1142,22 +1148,25 @@ input {
     height: 225px;
     padding:12px 0 13px;
     background-color: #fff;
+    position: relative;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb1{
+.msaa{
     float: left;
     width: 1000px;
     height: 225px;
     overflow: hidden;
-    position: relative;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb1 li{
+.jdms .jdms1 .jdmsbottom .jdmsb1{
+    height: 225px;
+}
+.jdms .jdms1 .jdmsbottom .jdmsb1 .jdmsb2{
     float: left;
     width: 170px;
     height: 225px;
     padding: 0 14px 0 15px;
     border-right: 1px solid #e7e7e7;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb1 li .jdmsb1top{
+.jdms .jdms1 .jdmsbottom .jdmsb1 .jdmsb2 .jdmsb1top{
     position: absolute;
     top: 0;
     left: 0;
@@ -1170,7 +1179,7 @@ input {
     height: 40px;
     z-index: 1;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb1 li .jdmsb1top .chaojimiao{
+.jdms .jdms1 .jdmsbottom .jdmsb1 .jdmsb2 .jdmsb1top .chaojimiao{
     font-size: 12px;
     color: #fff;
     line-height: 14px;
@@ -1179,19 +1188,19 @@ input {
     padding-top: 2px;
     z-index: 5;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb1 li a{
+.jdms .jdms1 .jdmsbottom .jdmsb1 .jdmsb2 a{
     display: block;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb1 li a img{
+.jdms .jdms1 .jdmsbottom .jdmsb1 .jdmsb2 a img{
     width: 130px;
     height: 130px;
     margin: 17px auto;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb1 li a img:hover{
+.jdms .jdms1 .jdmsbottom .jdmsb1 .jdmsb2 a img:hover{
     transition: all 4s;
     transform: translateY(-5px);
 }
-.jdms .jdms1 .jdmsbottom .jdmsb1 li a .jdmsb1zi{
+.jdms .jdms1 .jdmsbottom .jdmsb1 .jdmsb2 a .jdmsb1zi{
     color: #999;
     display: block;
     max-width: 100%;
@@ -1203,34 +1212,34 @@ input {
     word-wrap: break-word;
     word-break: break-all;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb1 li a .jdmsb1zi:hover{
+.jdms .jdms1 .jdmsbottom .jdmsb1 .jdmsb2 a .jdmsb1zi:hover{
     color: #C81623;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb1 li p{
+.jdms .jdms1 .jdmsbottom .jdmsb1 .jdmsb2 p{
     padding: 3px 0;
     height: 25px;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb1 li p .pqian{
+.jdms .jdms1 .jdmsbottom .jdmsb1 .jdmsb2 p .pqian{
     font-size: 18px;
     font-weight: 700;
     margin-right: 8px;
     color: #f10214;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb1 li p .pqian i{
+.jdms .jdms1 .jdmsbottom .jdmsb1 .jdmsb2 p .pqian i{
     font-size: 12px;
     font-weight: 300;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb1 li p .pqian2{
+.jdms .jdms1 .jdmsbottom .jdmsb1 .jdmsb2 p .pqian2{
     color: #999;
     font-size: 12px;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb1 li p .pqian2 i{
+.jdms .jdms1 .jdmsbottom .jdmsb1 .jdmsb2 p .pqian2 i{
     margin-right: 3px;
     font-family: arial;
     font-weight: 400;
     font-size: 12px;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb2{
+.jdms .jdms1 .jdmsbottom .jdmsb3{
     width: 180px;
     height: 225px;
     float: right;
@@ -1238,24 +1247,24 @@ input {
     z-index: 10;
     position: relative;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb2 .jdmsb2tu{
+.jdms .jdms1 .jdmsbottom .jdmsb3 .jdmsb3tu{
     width: 180px;
     height: 225px;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb2 .jdmsb2tutu{
+.jdms .jdms1 .jdmsbottom .jdmsb3 .jdmsb3tutu{
     display: block;
     width: 180px;
     height: 225px;
     position: absolute;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb2 .jdmsdian{
+.jdms .jdms1 .jdmsbottom .jdmsb3 .jdmsdian{
     position: absolute;
     bottom: 10px;
     width: 180px;
     text-align: center;
     z-index: 2;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb2 .jdmsdian .jdmsdinadian{
+.jdms .jdms1 .jdmsbottom .jdmsb3 .jdmsdian .jdmsdinadian{
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -1263,7 +1272,7 @@ input {
     margin: 0 3px;
     background: #342a2d;
 }
-.jdms .jdms1 .jdmsbottom .jdmsb2 .jdmsdian .jdmsdinadian:hover{
+.jdms .jdms1 .jdmsbottom .jdmsb3 .jdmsdian .jdmsdinadian:hover{
     background-color: #E01222;
 }
 /* 火力全开 */
@@ -1488,7 +1497,7 @@ input {
         width: 66px;
         height: 12px;
         position: absolute;
-        left: 170px;
+        left: 45%;
         top: 420px;
         display: flex;
         justify-content: space-around;
@@ -1771,6 +1780,7 @@ opacity: 0.7;
     .dakk{
         width: 100%;
         height: auto;
+        margin-bottom: 30px;
     }
     .xiaokk{
         width: 1190px;
@@ -1806,8 +1816,7 @@ opacity: 0.7;
     .daKK{
         width: 1190px;
         height: 530px;
-        margin: 0 auto 30px;
-
+        margin: 0 auto;
     }
     .daKK .xp{
         width: 400px;
@@ -2066,7 +2075,7 @@ opacity: 0.7;
 .ashxia{
     width: 1190px;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     overflow: hidden;
 }
 .ashxia .ashleft:last-child{
@@ -2076,7 +2085,6 @@ opacity: 0.7;
     float: left;
     width: 590px;
     margin-right: 10px;
-    margin-bottom: 30px;
     overflow: hidden;
 }
 .ashleft .ashc{
@@ -2650,13 +2658,12 @@ opacity: 0.7;
     width: 1190px;
     height: auto;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 0 auto 30px;
 }
 .gg2{
     width: 1200px;
     height: auto;
     overflow: hidden;
-    margin-bottom: 20px;
 }
 .gg2 a{
     display: block;
@@ -2877,33 +2884,20 @@ opacity: 0.7;
     position: fixed;
     left: 90px;
     top: 73px;
+    display: none;
+    z-index: 10;
 }
 .gddw li{
     width: 34px;
-    height: 32px;
+    height: 38px;
     text-align: center;
     border-top: 1px solid #b1aaaa;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    cursor: pointer;
-    line-height: 15px;
-}
-.gddw li a{
-    color: #fff;
+    color: #fefefe;
     font-size: 12px;
-    line-height: 12px;
+    line-height: 18px;
 }
-.gddw li:hover{
-    background-color: #D70B1C;
-}
-.gddw li:nth-child(6) a{
-    line-height: 27px;
-}
-.gddw li:nth-child(1){
-    background-color: #D70B1C;
-}
-.gddw li:last-child{
-    background-color: #5E4A4A;
+.gddw li:nth-child(6){
+    line-height: 38px;
 }
 .gddw-right{
     width: 6px;

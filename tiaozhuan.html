@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>跳转楼层</title>
+	<link rel="stylesheet" href="css/tiapzhuan.css">
+</head>
+<body>
+	<div class="top">顶部</div>
+	<div class="kuai">1</div>
+	<div class="kuai">2</div>
+	<div class="kuai">3</div>
+	<div class="kuai">4</div>
+	<div class="kuai">5</div>
+	<div class="kuai">6</div>
+	<div class="kuai">7</div>
+	<div class="kuai">8</div>
+	<div class="kuai">9</div>
+	<div class="kuai">10</div>
+	<div class="kuai">11</div>
+	<div class="kuai">12</div>
+	<div class="bttom">底部</div>
+	<!-- 楼层 -->
+	<ul class="gddw">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+		<li>11</li>
+		<li>12</li>
+	</ul>
+</body>
+</html>
+<script src = "animate.js"></script>
+<script>
+/*	1.初始化
+		 * gddw  display:none
+	2.获取元素
+		 floor : 11
+		 gddw > li 11
+	3.控制Jump显示隐藏
+		 * window.onscroll
+		 * 滚动条当前的位置 wTop  document.body
+		 	 document.documentElements  window
+		 	 * wTop > floor[i].offsetTop-200 + 'px'
+				 * jump display block;
+	4.wTop >= floor[i].offsetTop
+		*gddw background red;
+	5.操作gddw给他添加点击事件
+		*gddw onclick
+			*滚动条当前的位置wTOP = floor[i].offsetTop     */
+	let floor = document.querySelectorAll('.kuai');
+	let gddw = document.querySelectorAll('.gddw>li');
+
+	let jump = document.querySelector('.gddw');
+
+	let obj = document.documentElement.scrollTop?document.documentElement:document.body;
+	//这个是为了获取浏览器滚动条滚动的距离，而这种写法是为了兼容ie低版本和其他浏览器
+	var num;
+
+	window.onscroll = function(){
+		let wTop = document.documentElement.scrollTop || document.body.scrollTop || window.scrollY || window.pageYOffset;
+		if(wTop > floor[0].offsetTop - 100){
+			jump.style.display = 'block';
+		}else{
+			jump.style.display = 'none';
+		}
+		for(let i = 0;i < floor.length;i++){
+			if(wTop >= floor[i].offsetTop - 100){
+				num = i;
+				for(let j = 0;j < gddw.length;j++){
+					gddw[j].style.backgroundColor = '#918888';
+				}
+				gddw[i].style.backgroundColor = "red";
+			}
+		}
+		for(let k = 0;k < gddw.length;k++){
+			gddw[k].aa = k;
+			gddw[k].onclick = function(){
+				animate(obj,{scrollTop:floor[this.aa].offsetTop - 100},1000,Tween.Linear);
+			}
+			gddw[k].onmouseover = function(){
+				gddw[this.aa].style.backgroundColor = "red";
+			}
+			gddw[k].onmouseout = function(){
+				if(this.aa != num){
+					gddw[this.aa].style.backgroundColor = "#918888";
+				}
+			}
+		}
+	}
+</script>

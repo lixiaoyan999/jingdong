@@ -1,0 +1,66 @@
+*{
+	margin: 0;
+	padding: 0;
+    font-style: normal;
+    list-style: none;
+}
+img{
+	display: block;
+}
+a{
+	text-decoration: none; 
+}
+body{
+    background-color: #f6f6f6;
+}
+input {
+    outline:none;
+}
+.top{
+	width: 100%;
+	height: 400px;
+	background-color: blue;
+	text-align: center;
+	line-height: 200px;
+	color: #fff;
+	font-size: 24px;
+}
+.bttom{
+	width: 100%;
+	height: 500px;
+	background-color: blue;
+	text-align: center;
+	line-height: 200px;
+	color: #fff;
+	font-size: 24px;
+}
+.kuai{
+	width: 1200px;
+	height: 500px;
+	border: 2px solid blue;
+	margin: 0 auto 100px;
+}
+/* 楼层 */
+.gddw{
+    background-color: #918888;
+    width:34px ;
+    height:auto;
+    position: fixed;
+    left: 90px;
+    top: 73px;
+    display: none;
+}
+.gddw li{
+    width: 34px;
+    height: 32px;
+    text-align: center;
+    border-top: 1px solid #b1aaaa;
+    cursor: pointer;
+    line-height: 15px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 32px;
+}
+.gddw li:nth-child(6) a{
+    line-height: 27px;
+}
